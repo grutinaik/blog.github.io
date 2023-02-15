@@ -1,0 +1,471 @@
+body{
+    margin:0;
+    /*font-family:serif;*/
+}
+
+p{
+   font-family: Sans-serif;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #343A40;
+  text-align: center;
+/*  padding: 14px 26px;*/
+  padding:0px 55px 10px 0px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 30px 0px 30px;
+}
+
+#header span i{
+ cursor: pointer;
+}
+
+#header span i:hover{
+  color: #017bff; 
+}
+
+#header a{
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+#header a:hover{
+  color: #017bff;
+}
+
+.topnav a:hover{
+  color: #017bff;
+}
+
+#header h3{
+  margin: 0px;
+}
+
+
+ #navbar{
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+.topnav{
+overflow: hidden;
+padding: 0px 30px 0px 30px;
+}
+
+#maindiv{
+  margin:5% 2%;
+}
+
+#titlediv{
+  background-color: #343A40;
+}
+
+#titlediv h2{
+  color: white;
+  font-size: 70px;
+  margin-bottom: 10px;
+} 
+
+#titlediv .tsubdiv{
+  width:50%;
+  padding: 20px 50px;
+}
+
+
+.tsubdiv p{
+  color: antiquewhite;
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 1.6px;
+  width: 90%;
+} 
+
+.tsubdiv p b{
+    color: white;
+
+}
+
+.flexstyle{
+ /*display: inline-block;*/
+ display: flex;
+}
+
+#flex{
+  margin-top: 50px;
+ /* width: 100%;*/
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+}
+
+ #worlddiv,#designdiv{
+  width: 47%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+  border: 1px solid #dde2e5;
+ /* box-shadow: 2px 7px 20px #f3f3f3;*/
+  box-shadow: 2px 3px #f3f3f3;
+}
+
+.flexcontent{
+  width: 55%;
+  padding:30px;
+}
+
+#flex span {
+  margin-bottom :5px;
+}
+
+#flex h2 {
+  margin: 3px 0px;
+  font-size: 30px;
+}
+
+.flexcontent h5{
+  margin-bottom: 3px;
+}
+
+.flexcontent p{
+    line-height: 1.2;
+    letter-spacing: 0.6px;
+  }
+
+.month{
+  color: #b8bcc0;
+  font-family: Sans-serif;
+}
+
+#worlddiv .title{
+  color: #288dff;
+} 
+
+#designdiv .title{
+  color: #29a745;
+} 
+
+.thumbnail{
+  width: 45%;
+  background-color: #55595c;
+  display: flex;
+}
+
+.thumbnail div{
+  margin:auto;
+  color: white;
+}
+
+.more{
+  color: #288dff;
+  cursor: pointer;
+}
+
+#lowerdiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#leftdiv{
+  width: 65%;
+}
+
+#rightdiv{
+  width: 30%;
+}
+
+ hr{
+  background-color:#ccc !important;
+  height: 1px;
+  border:none;
+}
+
+
+#leftdiv h3{
+  margin-bottom: 0px;
+  font-size: 30px;
+}
+
+#rightdiv h3{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#leftdiv h2{
+  font-size: 35px;
+}
+
+.spanblue{
+  color: #007bff;
+}
+
+#about{
+  margin-top: 20px;
+  background-color: #eef3fa;
+  border-radius: 7px;
+  padding: 10px 20px;
+}
+
+#about p{
+  font-weight: 100;
+}
+
+#rightdiv ul{
+   padding-left: 0px;
+}
+
+#rightdiv ul li{
+  list-style:none;
+  margin:5px 0px;
+}
+
+#rightdiv ul li a{
+  text-decoration: none; 
+  color: #017bff;
+}
+
+#rightdiv ul li a:hover{
+  color:blueviolet;
+}
+
+.btns{
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #a7adb1;
+}
+
+.container {
+  padding: 16px;
+}
+
+ input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px 1px;
+  padding-left: 10px;;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+#signupbtn{
+  cursor: pointer;
+  padding: 5px 4px;
+  border-radius: 5px;
+}
+
+.signupbtn{
+    background-color: #04AA6D;
+    color: white;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+#searchspan {
+  display: none;
+    position: fixed;
+    z-index: 1;
+    left: 60%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+#search{
+    width: 50%;
+    padding: 6px 1px;
+    padding-left: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.modal-content, #response-modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  width: 50%; 
+}
+
+.close {
+  position: absolute;
+  right: 20%;
+  top: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#btndiv{
+  margin-top: 10px;
+}
+
+.btns{
+  cursor: pointer;
+}
+
+.btns:hover{
+  color: #017bff;
+ border: 1px solid #017bff;
+}
+
+
+.errormsg {
+  margin-bottom: 10px;
+  color: red;
+  font-size: 15px;
+}
+
+#footer{
+  background-color: #dee1e6;
+  padding: 10px 20px;
+  color: black;
+}
+
+
+
+/*Mobile view*/
+@media only screen and (max-width:600px){
+
+#maindiv {
+    margin: 20% 2%;
+}
+
+  .topnav a{
+    display: none;
+     padding:5px 10px;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    background-color: #efefef;
+  }
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .topnav ul li{
+    padding: 2px 10px;
+  }
+
+  #titlediv .tsubdiv{
+    width:100%;
+    padding:5px;
+  }
+
+  #titlediv h2{
+  font-size: 40px;
+} 
+
+#flex,#worlddiv,#designdiv,#lowerdiv, #leftdiv, #rightdiv{
+  width: 100%;
+}
+
+#searchspan {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 40%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+
+.cancelbtn, .signupbtn {
+  width: 100%;
+}
+
+.modal-content, #response-modal-content{
+  width: 80%;
+}
+
+.close {
+  position: absolute;
+  right: 30px;
+  top: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+}

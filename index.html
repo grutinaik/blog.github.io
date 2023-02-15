@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<head>
+<title>Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./style.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+  <div id="navbar">
+  <div id="header">
+    <div style="align-self: flex-start;"><a href="https://www.semrush.com/blog/blog-ideas/?kw" target="_blank">Subscribe</a></div>
+    <div><h3>Large</h3></div>
+    <div><span><i class="fa fa-search" id="searchbtn"></i></span>&nbsp;&nbsp;<input type="button" name="signupbtn" id="signupbtn" value="Sign up"></div>
+
+    <div id="searchspan"><input type="text" name="search" id="search"></div>
+
+  </div>
+   <hr/>
+
+    <div class="topnav" id="myTopnav">
+      <a href="#worlddiv">World</a>
+      <a href="https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population" target="_blank">U.S.</a>
+      <a href="#technology">Technology</a>
+      <a href="#design">Design</a>
+      <a href="#culture">Culture</a>
+      <a href="#business">Business</a>
+      <a href="#politics">Politics</a>
+      <a href="#opinion">Opinion</a>
+      <a href="#science">Science</a>
+      <a href="#health">Health</a>
+      <a href="#style">Style</a>
+      <a href="#travel">Travel</a>
+      <a href="#" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+  </div>
+
+
+  <div class="modal" id="signup_modal">
+    <span class="close" title="close" id="closemodal">&times;</span>
+    <form class="modal-content" id="signupform">
+      <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr/>
+        <p id="fnameerror" class="errormsg"></p>
+        <label for="firstname"><b>First Name<sup><span style="color:red;">*</span></sup></b></label>
+        <input type="text" placeholder="Enter First Name" name="fname" id="fname"> 
+        <p id="lnameerror" class="errormsg"></p>
+        <label for="lastname"><b>Last Name<sup><span style="color:red;">*</span></sup></b></label>
+        <input type="text" placeholder="Enter Surname" name="lname" id="lname"> 
+        <p id="phoneerror" class="errormsg"></p>
+        <label for="phone"><b>Phone Number<sup><span style="color:red;">*</span></sup></b></label>
+        <input type="text" placeholder="Enter Phone Number" name="phone" id="phone" pattern="[0-9]{10}">
+        <p id="emailerror" class="errormsg"></p>
+        <label for="email"><b>Email<sup><span style="color:red;">*</span></sup></b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email">
+       
+        <div class="clearfix">
+        <input type="button" class="cancelbtn" id="cancelbtn" value="Cancel">
+        <input type="button" class="signupbtn" id="submitbtn" onclick="validate()" value="Submit">
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <div class="modal"  id="response_modal">
+    <span class="close" title="close" id="closeresmodal">&times;</span>
+    <div id="response-modal-content">
+      
+    </div>
+  </div>
+
+
+  <main id="maindiv"> 
+    <div id="titlediv">
+      <div class="tsubdiv">
+         <h2><i>Title of a longer<br/> featured blog post</i></h2>
+         <p>Multiple lines of text that form the lede, informing new  readers quickly and efficiently about what's most interesting in this post's contents.</p>
+         <p><b>Continue reading...</b></p>
+      </div>
+    </div>
+
+    <div id="flex">
+      <div id="worlddiv" class="flexstyle">
+        <div class="flexcontent">
+          <p class="title"><b>World</b></p>
+          <h2>Featured Post</h2>
+          <span class="month"> Nov 12</span>
+          <br/>
+          <p class="flexsubtitle">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <p class="more"><b id="worldmore">Continue reading</b></p>
+          <div id="readmoreworld" style="display: none;">
+           <p class="flexsubtitle">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+           <p class="more" id="hideworldinfo">Hide</p>
+        </div>
+        </div>
+          <div class="thumbnail"><div>Thumbnail</div></div> 
+      </div>
+      <div id="designdiv" class="flexstyle">
+        <div class="flexcontent">
+          <p class="title"><b>Design</b></p>
+          <h2>Post title</h2>
+          <span class="month"> Nov 11</span>
+          <br/>
+          <p class="flexsubtitle">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <p class="more"><b id="designmore">Continue reading</b></p>
+          <div id="readmoredesign" style="display: none;">
+           <p class="flexsubtitle">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+           <p class="more" id="hidedesigninfo">Hide</p>
+        </div>
+        </div>
+        
+
+          <div class="thumbnail"><div>Thumbnail</div></div> 
+      </div>
+    </div>
+
+    <div id="lowerdiv">
+      <div id="leftdiv">
+       <div><h3><i>From the Firehose</i></h3>
+        <hr/>
+       </div>
+       <div>
+        <h2>Sample blog post</h2>
+        <span>January 1, 2014 by <span class="spanblue">Mark</span></span>
+        <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported. </p>
+        <hr/>
+        <p>Cum sociis natoque penatibus et magnis <span class="spanblue">dis parturient montes</span>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+        <p>Curabitur blandit tempus porttitor. <b>Nullam quis risus eget urna mollis</b> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+       </div>
+
+       <div>
+         <h2>heading</h2>
+         <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+       </div>
+
+       <div>
+         <h2>Sub-heading</h2>
+         <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+         <p>Example code block</p>
+         <p> Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+       </div>
+
+       <div>
+         <h2>Sub-heading</h2>
+         <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+         <ul>
+           <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+           <li>Donec id elit non mi porta gravida at eget metus.</li>
+           <li>Nulla vitae elit libero, a pharetra augue.</li>
+         </ul>
+         <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+         <ol>
+           <li>Vestibulum id ligula porta felis euismod semper.</li>
+           <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+           <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+         </ol>
+         <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+       </div>
+
+       <div>
+         <h2>Another blog post</h2>
+         <span>December 23, 2013 by <span class="spanblue">Jacob</span></span>
+         <p>Cum sociis natoque penatibus et magnis <span class="spanblue"> dis parturient montes</span>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+         <p>Curabitur blandit tempus porttitor.<b> Nullam quis risus eget urna mollis</b> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+         <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+         <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+       </div>
+
+       <div>
+         <h2>New feature</h2>
+         <span>December 14, 2013 by <span class="spanblue">Chris</span></span>
+         <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+         <ul>
+           <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+           <li>Donec id elit non mi porta gravida at eget metus.</li>
+           <li>Nulla vitae elit libero, a pharetra augue.</li>
+         </ul>
+         <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+         <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+       </div>
+
+      </div>
+
+      <div id="rightdiv">
+       <div id="about">
+         <h3><i>About</i></h3>
+         <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+       </div>
+
+       <div>
+          <h3><i>Archives</i></h3>
+          <ul>
+            <li><a href="#mar2014">March 2014</a></li>
+            <li><a href="#feb2014">February 2014</a></li>
+            <li><a href="#jan2014">January 2014</a></li>
+            <li><a href="#dec2013">December 2013</a></li>
+            <li><a href="#nov2013">November 2013</a></li>
+            <li><a href="#oct2013">October 2013</a></li>
+            <li><a href="#sep2013">September 2013</a></li>
+            <li><a href="#aug2013">August 2013</a></li>
+            <li><a href="#july2013">July 2013</a></li>
+            <li><a href="#june2013">June 2013</a></li>
+            <li><a href="#may2013">May 2013</a></li>
+            <li><a href="#apr2013">April 2013</a></li>
+          </ul>
+       </div>
+
+       <div>
+         <h3><i>Elsewhere</i></h3>
+         <ul>
+         <li><a href="https://grutinaik.github.io/dreamsoft.github.io/" target="_blank">GitHub</a></li>
+         <li><a href="#">Twitter</a></li>
+         <li><a href="#">Facebook</a></li>
+       </ul>
+       </div>
+      </div>
+    </div>
+   <div id="btndiv">
+    <input type="button" class="btns" id="oldbtn" name="oldbtn" value="Older" />
+    <input type="button" class="btns" id="newbtn" name="newbtn" value="Newer" />
+  </div>
+
+  <div id="oldnews">
+         <h2>blog post</h2>
+         <span>December 23, 2013 by <span class="spanblue">Jacob</span></span>
+         <p>Cum sociis natoque penatibus et magnis <span class="spanblue"> dis parturient montes</span>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+         <p>Curabitur blandit tempus porttitor.<b> Nullam quis risus eget urna mollis</b> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+         <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+         <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+  </div>
+
+  <div id="newnews">
+        <hr/>
+        <h2>Sample blog post</h2>
+        <span>January 1, 2014 by <span class="spanblue">Mark</span></span>
+        <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported. </p>
+       
+        <p>Cum sociis natoque penatibus et magnis <span class="spanblue">dis parturient montes</span>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+        <p>Curabitur blandit tempus porttitor. <b>Nullam quis risus eget urna mollis</b> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+       </div>
+
+  </main>
+  <footer id="footer">
+    <div><center><p>&copy blog.com | Developed By : Jagruti Naik</p></center></div>
+  </footer>
+
+ <script type="text/javascript">
+
+  $(document).ready(function(){
+
+    $('#oldnews').css("display","none");
+    $('#newnews').css("display","none");
+   
+    $('#worldmore').click(function(){
+    // alert();
+    $('#readmoreworld').css("display","block");
+   });
+
+   $('#designmore').click(function(){
+    // alert();
+    $('#readmoredesign').css("display","block");
+   });
+
+   $('#hideworldinfo').click(function(){
+    // alert();
+    $('#readmoreworld').css("display","none");
+   });
+
+   $('#hidedesigninfo').click(function(){
+    // alert();
+    $('#readmoredesign').css("display","none");
+   });
+   
+   $('#signupbtn').click(function(){
+    $('#signup_modal').css("display","block");
+   });
+
+   $('#closemodal').click(function(){
+    $('#signup_modal').css("display","none");
+   });
+
+   $('#closeresmodal').click(function(){
+    $('#response_modal').css("display","none");
+    $('#signup_modal').css("display","none");
+    document.getElementById('signupform').reset();
+   });
+
+   $('#cancelbtn').click(function(){
+    $('#signup_modal').css("display","none");
+   });
+
+   $('#oldbtn').click(function(){
+    $('#oldnews').css("display","block");
+   });
+
+   $('#newbtn').click(function(){
+    $('#newnews').css("display","block");
+   });
+
+   $('#searchbtn').click(function(){
+    $('#searchspan').css("display","block");
+   });
+
+ });
+
+
+  var search = document.getElementById('searchspan');
+  window.onclick = function(e){
+    if(e.target===search){
+      search.style.display = "none";
+    }
+  } 
+
+
+ function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+function validate(){
+  var fname = $('#fname').val();
+  var lname = $('#lname').val();
+  var phone = $('#phone').val();
+  var email = $('#email').val();
+  var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
+
+  if(fname=="" || fname==null){
+   document.getElementById('fnameerror').innerHTML ="First name is required.";
+   return false;
+  }
+  else if(!fname.match(/^[a-z]+$/i)){
+    document.getElementById('fnameerror').innerHTML ="Letters only please.";
+   return false;
+  }
+  else if(lname=="" || lname==null){
+    document.getElementById('lnameerror').innerHTML = "Surname is required.";
+    return false;
+  }
+   else if(!lname.match(/^[a-z]+$/i)){
+    document.getElementById('lnameerror').innerHTML ="Letters only please.";
+   return false;
+  }
+
+  else if(isNaN(phone)){
+     document.getElementById('phoneerror').innerHTML = "Only numbers are allowed";
+  }
+  else if(phone=="" || phone==null || phone.length > 10 || phone.length < 10){
+    document.getElementById('phoneerror').innerHTML = "Enter 10 digits phone number";
+    return false;
+  }
+  else if(email=="" || email==null){
+    document.getElementById('emailerror').innerHTML = "Enter your email.";
+    return false;
+  }
+  else if(!email.match(pattern)){
+    document.getElementById('emailerror').innerHTML = "Please enter valid email";
+    return false;
+  }
+  else{
+    submitform(fname,lname,phone,email);
+  }
+
+}
+
+function submitform(fname,lname,phone,email){
+ document.getElementById('response_modal').style.display = "block";
+document.getElementById('response-modal-content').innerHTML = "Hii.. "+ fname+" "+lname+" <br> Your Phone number is "+phone+" <br/> Your Email is "+email+" <br> Thank You !!";
+}
+
+ </script>
+
+
+
+</body>
+</Doctype>
